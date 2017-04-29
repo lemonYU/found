@@ -1,0 +1,32 @@
+/*背景*/
+*{font-family: "微软雅黑";}
+.bg{
+	background: #019199!important;
+}
+/*文字颜色*/
+.color{
+	color: #019199!important;
+}
+.white{
+	color: #fff!important;
+}
+/*文字大小*/
+.f12{
+	font-size:12px ;
+}
+.f14{
+	font-size:14px ;
+}
+.f16{
+	font-size:16px ;
+}
+/*定位*/
+.pa{
+	position: absolute;
+}
+.pr{
+	position: relative;
+}
+.fixed{
+	position: fixed;
+}

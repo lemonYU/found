@@ -1,0 +1,62 @@
+body,.page-title{
+	background: #ded9c9;
+}
+.page-title {
+  padding: 0;
+  margin: 53px auto 0px;
+}
+.logo{
+	width: 74px;
+	height: 50px;
+	background:#019199 url(../img/logo.png) no-repeat;
+}
+.logo:hover{
+	background:#019199 url(../img/logo.png) no-repeat!important;
+}
+.navbar {
+     margin-bottom: 0px; 
+     box-shadow: 0px 2px 2px #ccc;
+}
+
+.fNavbar a{
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.fNavbar .publish{
+	background: #019199;
+	color: #fff;
+	font-size: 14px;
+}
+.fNavbar .navbar-form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.fNavbar .navInput,.fNavbar .publish{
+	border: 1px solid #019199;
+    border-radius: 4px;
+}
+.page-cate-title{
+	background: #4fb9e9;
+    background-image: -webkit-linear-gradient(left,#efefef,#4fb9e9 20%,#4fb9e9 80%,#efefef);
+    background-image: -moz-linear-gradient(left,#efefef,#4fb9e9 20%,#4fb9e9 80%,#efefef);
+    background-image: -ms-linear-gradient(left,#efefef,#4fb9e9 20%,#4fb9e9 80%,#efefef);
+    background-image: -o-linear-gradient(left,#efefef,#4fb9e9 20%,#4fb9e9 80%,#efefef);
+    background-image: linear-gradient(to right,#efefef,#4fb9e9 20%,#4fb9e9 80%,#efefef);
+    height: 1px;
+    text-align: center;
+    top: 10px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+.page-cate-title .title-text {
+    position: relative;
+    top: -8px;
+    font-size: 18px;
+    line-height: 1;
+    color: #4fb9e9;
+    padding: 0 10px;
+    background: #ded9c9;
+}
+.page-cate-panel .panel{
+
+}
