@@ -40,33 +40,45 @@ if ($_SESSION['admin'] == "OK") {
 
 ?>
                 <p id="hr"></p>
-                <table width='20%' id='cow' cellspacing='0' cellpadding='0'>
-                    <form action="uppassword.php" method="post" style="background-color:#EEF2F4; width:60%; " >
-                        <tr><td width='40%'><strong>帐号：</strong></td>
-                            <td width='60%'><input type='text' name='username' disabled value='<?=$username?>'></td></tr><br />
-                        <tr><td width='40%' class='nickname'><strong>姓名：</strong></td>
-                            <td width='60%'><input name="nickname" type="text" size="16" maxlength="16" value="<?=$nickname?>"/></td></tr>
-                        <tr><td width='40%' class='infobr'><strong>密码：</strong></td>
-                            <td width='60%'><input name="password" type="password" size="16" maxlength="16" /></td></tr>
-                        <tr><td></td>
-                            <td width='100%'><input name="submit" type="submit" value="修改" />
-                                <input name="B2" type="reset" value="重置" /></td></tr>
-                                <input type="hidden" name="id" value=<?= $_GET['id'];?>>
-                    </form>
-                </table>
+                <div class="col-lg-10">
+                    <h4 align="center">用户信息管理</h4>
+
+                    <form class="form-horizontal" action="uppassword.php" method="post" >
+                      <div class="form-group">
+                        <label for="username" class="col-sm-3 control-label">账号</label>
+                        <div class="col-sm-6">
+                          <input type="text" required class="form-control" id="username" disabled value='<?=$username?>' name="username">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="nickname" class="col-sm-3 control-label">姓名</label>
+                        <div class="col-sm-6">
+                          <input type="text" required class="form-control" id="nickname" value="<?=$nickname?>" name='nickname'>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">密码</label>
+                        <div class="col-sm-6">
+                          <input type="password" required class="form-control" id="password" placeholder="Password" name="password">
+                        </div>
+                      </div>
+                    <div class="col-sm-3 col-sm-offset-3">
+                        <input type="submit" name="submit" class="btn btn-success pull-left" value='修改'>
+                        <input type="reset" name="B2" class="btn btn-default pull-left" value='重置'>
+                        <input type="hidden" name="id" value=<?= $_GET['id'];?>>
+                    </div>
+                  </form>
+
+                </div>
                 <?php
             } else
                 header("location:login.php");
             mysql_close();
             ?>
-        </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
             <?php
             include_once 'foot.php'; //插入foot.php页脚信息
             ?>
-        </div>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

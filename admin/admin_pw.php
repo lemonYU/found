@@ -27,7 +27,8 @@ if ($_SESSION['admin'] == "OK") {
 </head>
 <body>
 <?php require_once 'head.php';?>
-                <p id="hr"></p>
+            <p id="hr"></p>
+            <div class="col-lg-10">
                 <table width='20%' id='cow' cellspacing='0' cellpadding='0'>
                     <form action="uppassword.php" method="post" style="background-color:#EEF2F4; width:60%; " >
                         <tr><td width='40%'><strong>帐号：</strong></td>
@@ -48,12 +49,9 @@ if ($_SESSION['admin'] == "OK") {
             ?>
         </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
-            <?php
-            include_once 'foot.php'; //插入foot.php页脚信息
-            ?>
-        </div>
+        <?php
+        include_once 'foot.php'; //插入foot.php页脚信息
+        ?>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

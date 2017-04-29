@@ -30,7 +30,8 @@ include_once '../inc/order_sql.php';
                 <!-- 面板 -->
                 <div class="panel">
                     <div class="panel-heading clearfix">
-                        <h3 class="pull-left">分类列表 <small>分类</small></h3>
+
+                        <h3 class='pull-left'>分类列表 <small>分类</small></h3>
                         <!-- 面包屑导航 -->
                         <ol class="breadcrumb pull-right">
                             <li>
@@ -89,13 +90,7 @@ include_once '../inc/order_sql.php';
 
                             <table class='table table-bordered table-hover text-center'>
                                 <thead>
-                                <!--<tr>-->
-                                    <!--<th ng-click="sortFn('NO')">序号</th>-->
-                                    <!--<th>分类</th>-->
-                                    <!--<th ng-click="sortFn('num')">文章数量</th>-->
-                                    <!--<th ng-click="sortFn('order')">排序</th>-->
-                                    <!--<th>操作</th>-->
-                                <!--</tr>-->
+
                                 <tr>
                                     <th>序号</th>
                                     <th>分类</th>
@@ -146,9 +141,9 @@ include_once '../inc/order_sql.php';
     <?php
     while ($rs = mysql_fetch_object($result)) {
         if (($rs->fabu) == '1') {
-            $leibie = '<font color=red>挂失</font>';
+            $leibie = '挂失';
         } else {
-            $leibie = '<font color=blue>招领</font>';
+            $leibie = '招领';
         }
         echo"
 		<table width='60%' id='cow' cellspacing='0' cellpadding='0'>
@@ -157,7 +152,7 @@ include_once '../inc/order_sql.php';
 			<table width='100%' cellspacing='1' cellpadding='2'>
 			<tr align='left'>
 				<td width='6%' class='infobr'>$leibie</td>
-				<td width='37%' class='infobr'><strong><font color='blue'><a href='../info.php?id=$rs->id' target='_blank'>$rs->title</a></font></strong></td>
+				<td width='37%' class='infobr'><strong><a href='../info.php?id=$rs->id' target='_blank'>$rs->title</a></strong></td>
 				<td width='17%' class='infobr'>$rs->name</td>
 				<td width='14%' class='infobr'>$rs->ip</td>
 				<td width='18%' class='infobr'>$rs->time</td>
@@ -172,13 +167,31 @@ include_once '../inc/order_sql.php';
           echo  "<li><a href=modify.php?id=".$rs->id." >修改</a> <a href=delete.php?id=".$rs->id." >删除</a> <a href='../info.php?id=".$rs->id."' target='_blank'>浏览</a></li></ul></div>";
          */
     }
+    echo "<nav aria-label='Page navigation'>
+              <ul class='pagination'>
+                <li>
+                  <a href='#' aria-label='Previous'>
+                    <span aria-hidden='true'>&laquo;</span>
+                  </a>
+                </li>
+                <li><a href='#'>1</a></li>
+                <li><a href='#'>2</a></li>
+                <li><a href='#'>3</a></li>
+                <li><a href='#'>4</a></li>
+                <li><a href='#'>5</a></li>
+                <li>
+                  <a href='#' aria-label='Next'>
+                    <span aria-hidden='true'>&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+               <span class='pull-right' style='line-height:70px'>每页显示<b>$page_size</b>条，总共有<b>$amount</b>条信息</span>
+            </nav>";
     echo"
-		<table width='60%' cellspacing='1' cellpadding='2'>
-			<tr bgcolor='#EEF2F4'><td>&nbsp;</td></tr>
-		</table>
-		<table width='60%' cellspacing='1' cellpadding='2'>
-			<tr bgcolor='#DBE6F5'>
-			<td><span style='float:left; text-align:left'><font color=#666666>$page_string</font></span><span style='float:right; text-align:left'><font color=#666666>每页显示<b>$page_size</b>条，总共有&nbsp;<b>$amount</b>&nbsp;条信息。<font></span></td>
+
+		<table  class='table '>
+			<tr>
+			<td><span style='float:left; text-align:left'>$page_string</span><span style='float:right; text-align:left'>每页显示<b>$page_size</b>条，总共有<b>$amount</b>条信息</span></td>
 			</tr>
 		</table>";
 } else {
@@ -189,12 +202,9 @@ mysql_close();
 ?>
         </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
-<?php
-include_once 'foot.php'; //插入foot.php页脚信息
-?>
-        </div>
+        <?php
+        include_once 'foot.php'; //插入foot.php页脚信息
+        ?>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

@@ -8,9 +8,9 @@
     $res = mysql_fetch_object($result2);
     $nickname = isset($res->nickname) ? $res->nickname : '';
     $id = isset($res->id) ? $res->id : '';
-?>;
+?>
 <div class='ime-main'>
-    <nav class="navbar navbar-default" >
+    <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand pull-left" href="index.php"> <?php echo $nickname;?></a>
@@ -55,7 +55,7 @@
                         <img class="img-circle" width="45px" height="45px" src="/public/admin/img/2.jpg" alt="">
                     </div>
                     <div class="username pull-left">
-                        <p class=''>Hi,<?php echo $nickname;?></p>
+                        <strong style='padding-left:10px'> Hi,<?php echo $nickname;?></strong><br>
                         <i></i>
                         <span>在线</span>
                     </div>

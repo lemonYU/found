@@ -20,6 +20,7 @@ if ($_SESSION['admin'] == "OK") {
     <meta name="viewport" content="width=device-width,initial-scal=1,maxmum-scal=1,user-scalable=no">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
+    <link rel="stylesheet" href='/public/css/common.css'>
     <link rel="stylesheet" href="/public/admin/css/style.css">
     <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
     <script src='/public/admin/js/bootstrap.min.js'></script>
@@ -33,7 +34,58 @@ if ($_SESSION['admin'] == "OK") {
 <body>
 <?php require_once 'head.php';?>
                 <p id="hr"></p>
-                <table width='40%' id='cow' cellspacing='0' cellpadding='0'>
+<div class="col-lg-10">
+        <h4>失物信息编辑</h4>
+        <p id="hr"></p>
+        <form class="form-horizontal"  action="updata.php" method="post" name="name1" id="name1">
+
+            <!--网站标题-->
+          <div class="form-group">
+              <label for="post_title" class="col-sm-2 control-label">网站标题</label>
+              <div class="col-sm-8">
+                <input type="text" name="post_name" required class="form-control" value='<?= $webname ?>'>
+              </div>
+          </div>
+          <!--站长QQ-->
+          <div class="form-group">
+
+              <label for="user_name" class="col-sm-2 control-label">站长QQ</label>
+              <div class="col-sm-8">
+
+                <input type="text" required class="form-control" name="post_qq" id="post_qq" value='<?= $webqq ?>'>
+              </div>
+          </div>
+          <!--邮箱-->
+          <div class="form-group">
+
+              <label for="user_qq" class="col-sm-2 control-label">网站邮箱</label>
+              <div class="col-sm-8">
+                <input type="text" required class="form-control" name="post_mail" id="post_mail" value='<?= $webmail ?>'>
+
+              </div>
+          </div>
+
+         <!--联系电话-->
+          <div class="form-group">
+
+              <label for="user_tel" class="col-sm-2 control-label">网站统计</label>
+              <div class="col-sm-8">
+                <input type="text" required class="form-control" name="post_stat" id="post_stat" value="<?= $webstat ?>">
+              </div>
+          </div>
+          <div class="col-sm-2 col-sm-offset-2">
+                <input type="submit" name="submit" class="btn btn-success pull-left" value='修改'>
+                <input type="reset" name="B2" class="btn btn-default pull-left" value='重置'>
+
+          </div>
+
+        </form>
+    </div>
+
+
+
+                <!-- old start -->
+               <!--  <table width='40%' id='cow' cellspacing='0' cellpadding='0'>
                     <tr><td valign='top'>
                             <table width='100%' cellspacing='1' cellpadding='2'>
                                 <form action="webupdata.php" method="post">
@@ -51,20 +103,17 @@ if ($_SESSION['admin'] == "OK") {
                                 </form>
                             </table>
                         </td></tr>
-                </table>
+                </table> -->
+                <!-- old old -->
                 <?php
             } else
                 header("location:login.php");
             mysql_close();
             ?>
-        </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
             <?php
             include_once 'foot.php'; //插入foot.php页脚信息
             ?>
-        </div>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

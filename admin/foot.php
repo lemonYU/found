@@ -2,12 +2,11 @@
 
 
 <!--尾部-->
-<div class='copyright text-center'>
-    © 2016 All Rights Reserved. Lemon
-</div>
-</div>
-
-</div>
+        <div class='copyright text-center'>
+            © 2016 All Rights Reserved. Lemon
+        </div>
+    </div>
+  </div>
 </div>
 
 </body>
