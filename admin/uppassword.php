@@ -9,7 +9,9 @@ if ($_SESSION['admin'] == "OK") {
     $exec = "UPDATE `users` SET `password` = '" . sha1($_POST['password']) ."' , `nickname` = '" . $_POST['nickname'] . "' WHERE `id` ='" . $_POST['id'] . "'";
     $result = mysql_query($exec);
     mysql_close();
-    echo"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /><script language='javaScript'>alert('修改密码成功，正在返回……');window.history.back(-1);</script>";
+    session_unset();
+    session_destroy();
+    echo"<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' /><script language='javaScript'>alert('修改密码成功，请使用新密码登录……');window.open('login.php','_self');</script>";
 } else {
     header("location:login.php");
 }

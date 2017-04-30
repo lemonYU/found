@@ -12,13 +12,12 @@
 <head>
     <meta charset="UTF-8">
     <title>失物招领</title>
-    <meta name="viewport" content="width=device-width,initial-scal=1,maxmum-scal=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/public/admin/css/style.css">
     <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
     <script src='/public/admin/js/bootstrap.min.js'></script>
-    <script src="/public/admin/js/angular.min.js"></script>
     <script src='/public/admin/js/manager.js'></script>
     <style>
         th{cursor: pointer;}
@@ -33,7 +32,7 @@
                         <?php
                             $catagray = isset($_GET['info'])?$_GET['info']:'';
                             if($catagray=='zhaoling'){
-                                 echo "<h3 class='pull-left'>招领<small> 招领信息管理</small></h3>
+                                 echo "<h3 class='pull-left'>信息管理<small> 招领信息管理</small></h3>
                                  <!-- 面包屑导航 -->
                                 <ol class='breadcrumb pull-right'>
                                     <li>
@@ -46,7 +45,7 @@
                                     <li class='active'>招领信息列表</li>
                                 </ol>";
                             }else if($catagray=='guashi'){
-                                 echo "<h3 class='pull-left'>挂失<small> 挂失信息管理</small></h3>
+                                 echo "<h3 class='pull-left'>信息管理<small> 挂失信息管理</small></h3>
                                  <!-- 面包屑导航 -->
                                     <ol class='breadcrumb pull-right'>
                                         <li>
@@ -74,7 +73,7 @@
                 <p id="hr"></p>
                 <div class="ime-wrap">
                     <div class="ime-tab clearfix">
-                        <a href="/admin/cats/add" type="button" class="btn-add btn btn-default pull-right">
+                        <a href="info_add.php?info=<?=$_GET['info']?>" type="button" class="btn-add btn btn-success pull-right">
                             添加信息
                         </a>
                         <div class="ime-inner" ng-controller="myCtrl">
@@ -108,11 +107,11 @@
                                     <td><?php echo $rs->name; ?></td>
                                     <td><?php echo $rs->time; ?></td>
                                     <td>
-                                        <a href="modify.php?id=<?=$rs->id?>" type="button" class="btn btn-default">
+                                        <a href="modify.php?id=<?=$rs->id?>" type="button" class="btn btn-info">
                                         <span class='glyphicon glyphicon-edit'></span>
                                         编辑
                                         </a>
-                                        <a href="delete.php?id=<?=$rs->id?>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-default">
+                                        <a href="delete.php?id=<?=$rs->id?>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-danger">
                                         <span class=' glyphicon glyphicon-trash'></span>
                                         删除
                                         </a>
@@ -154,26 +153,6 @@
           echo  "<li><a href=modify.php?id=".$rs->id." >修改</a> <a href=delete.php?id=".$rs->id." >删除</a> <a href='../info.php?id=".$rs->id."' target='_blank'>浏览</a></li></ul></div>";
          */
     }
-    echo "<nav aria-label='Page navigation'>
-              <ul class='pagination'>
-                <li>
-                  <a href='#' aria-label='Previous'>
-                    <span aria-hidden='true'>&laquo;</span>
-                  </a>
-                </li>
-                <li><a href='#'>1</a></li>
-                <li><a href='#'>2</a></li>
-                <li><a href='#'>3</a></li>
-                <li><a href='#'>4</a></li>
-                <li><a href='#'>5</a></li>
-                <li>
-                  <a href='#' aria-label='Next'>
-                    <span aria-hidden='true'>&raquo;</span>
-                  </a>
-                </li>
-              </ul>
-               <span class='pull-right' style='line-height:70px'>每页显示<b>$page_size</b>条，总共有<b>$amount</b>条信息</span>
-            </nav>";
     echo"
 
 		<table  class='table '>

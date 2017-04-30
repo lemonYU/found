@@ -1,5 +1,5 @@
-<!-- 
-	<a href="index.php">首页</a><a href="add.php">信息发布</a><a href="index.php?info=zhaoling">招领信息</a><a href="index.php?info=guashi">挂失信息</a><a href="search.php">搜索</a> 
+<!--
+	<a href="index.php">首页</a><a href="add.php">信息发布</a><a href="index.php?info=zhaoling">招领信息</a><a href="index.php?info=guashi">挂失信息</a><a href="search.php">搜索</a>
 -->
 <?php
 
@@ -21,7 +21,7 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
 <head>
     <meta charset="utf-8">
     <title><?= $topic; ?><?= $webname; ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <link href="/../favicon.ico" rel="shortcut icon">
     <link href="/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/public/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
@@ -72,8 +72,7 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
           </div><!-- /.container-fluid -->
         </nav>
     <!--导航条end-->
-    
+
     <div class="page-title page-title-4 bg-secondary container">
-			
-            
-           
+
+

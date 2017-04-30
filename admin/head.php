@@ -4,7 +4,7 @@
 <?php
 
     $exec2 = "select id,nickname from users where username='".$_SESSION['user']."'";
-    $result2 = mysql_query($exec2);
+    $result2 = @mysql_query($exec2);
     $res = mysql_fetch_object($result2);
     $nickname = isset($res->nickname) ? $res->nickname : '';
     $id = isset($res->id) ? $res->id : '';
@@ -14,8 +14,8 @@
         <div class="container-fluid clearfix">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand pull-left" href="index.php"> <?php echo $nickname;?></a>
-            <button type="button" class="btn btn-primary btn-link hamburger" style='color:#fff'>
-                <span class=" glyphicon glyphicon-menu-hamburger"></span>
+            <button id='hamburger' type="button" class="btn btn-primary btn-link hamburger" style='color:#fff'>
+                <span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
             <div class="dropdown pull-right">
                 <a class=" rLink dropdown-toggle"  data-toggle="dropdown" role="button" >
@@ -33,7 +33,7 @@
                     </li>
                     <li class="login-btn" style="white-space:nowrap">
                         <a href="admin_pw.php?id=<?= $id;?>" role="button" type="button" class="btn btn-primary">
-                            用户信息
+                            修改密码
                         </a>
                         <a href="exit.php" role="button" type="button" class="btn btn-primary" >
                             注销登录

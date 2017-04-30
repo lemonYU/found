@@ -1,5 +1,5 @@
 body,.page-title{
-	background: #ded9c9;
+	/* background: #ded9c9; */
 }
 .page-title {
   padding: 0;
@@ -14,7 +14,7 @@ body,.page-title{
 	background:#019199 url(../img/logo.png) no-repeat!important;
 }
 .navbar {
-     margin-bottom: 0px; 
+     margin-bottom: 0px;
      box-shadow: 0px 2px 2px #ccc;
 }
 

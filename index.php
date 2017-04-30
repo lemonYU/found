@@ -1,5 +1,5 @@
 
-    	
+
         <!-- 页顶-栏目信息-Start  -->
             <?php
                 include_once 'head.php';
@@ -35,21 +35,24 @@
 	            </div>
 
             </div>
-           
+
         <!-- 页顶-栏目信息-End  -->
         <!--整页居中对齐 -->
             <!-- <p class="title" id="title"><?= $topic; ?></p> --><!--页面标题 -->
            <!--  <?= $ad_top; ?> </br> --><!--顶部广告-->
             <!--栏目开始-->
-            
-            <table  class="table table-bordered table-hover text-center">
-                <tr>
-                    <td>分类</td>
-                    <td>标题</td>
-                    <td>提交时间</td>
-                </tr>
-                       
-            
+
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                    <tr>
+                        <td>分类</td>
+                        <td>标题</td>
+                        <td>提交时间</td>
+                    </tr>
+                </thead>
+
+
+
         <!--栏目结束 -->
         <?php
             include_once 'pagesql.php';
@@ -61,31 +64,31 @@
                     $leibie = '<span>招领</span>';
                 }
                 echo"
-		  
-				<tr>
-					<td>$leibie</td>
-					<td><a href='info.php?id=" . $rs->id . "' target='_blank' title='$rs->title'>$rs->title</a></td>
-					<td>$rs->time</td>
-				</tr>";
+                <tbody>
+    				<tr>
+    					<td>$leibie</td>
+    					<td><a href='info.php?id=" . $rs->id . "' target='_blank' title='$rs->title'>$rs->title</a></td>
+    					<td>$rs->time</td>
+    				</tr>
+                </tbody>";
             }
- 
+
 			echo"
 			</table>
-			 
+
         	 <p class='clearfix'>
         	   		<span class='pull-left' align='left'>$page_string</span>
-        	   		
+
         	   		<span style='float:right; text-align:left'>
-        	   			
+
         				每页显示<b>$page_size</b>条，总共有&nbsp;<b>$amount</b>&nbsp;条";
-        		
+
         	            echo $topic;
-        	            echo"。</span>
-        	<p>";
+        	            echo"</span><p>";
 
             mysql_close();
             ?>
-      
+
 
 <!-- 页脚-版权信息-Start  -->
     ﻿<p id="hr"></p>

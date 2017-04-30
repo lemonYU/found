@@ -1,6 +1,7 @@
 $(function(){
     // 导航中间的控制按钮
     (function(){
+
         $('.hamburger').click(function(){
             $('.col-lg-2').toggle();
             if($('.col-lg-10').hasClass('col-lg-10')){

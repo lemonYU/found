@@ -1,13 +1,18 @@
 <?php
+/**
+ * @Author: anchen
+ * @Date:   2017-04-30 17:38:43
+ * @Last Modified by:   anchen
+ * @Last Modified time: 2017-04-30 19:23:51
+ */
 
 #管理 - 密码
 
 session_start();
 include_once '../inc/conn.php';
-include_once '../inc/info_user.php';
 if ($_SESSION['admin'] == "OK") {
     ?>
-<!doctype html>
+   <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,21 +31,26 @@ if ($_SESSION['admin'] == "OK") {
 </style>
 </head>
 <body>
-<?php require_once 'head.php';?>
-            <br>
-             <h4 align="center">修改密码</h4><br>
-            <div class="col-lg-10">
-                 <form class="form-horizontal" action="uppassword.php" method="post" >
+<?php
+
+    require_once 'head.php';
+
+?>
+                <p id="hr"></p>
+                <div class="col-lg-10 col-md-10">
+                    <h4 align="center">用户信息管理</h4>
+
+                    <form class="form-horizontal" action="user_insert.php" method="post" >
                       <div class="form-group">
                         <label for="username" class="col-sm-3 control-label">账号</label>
                         <div class="col-sm-6">
-                          <input type="text" required class="form-control" id="username" disabled value='<?= $_SESSION['user']; ?>' name="username">
+                          <input type="text" required class="form-control" id="username"   name="username">
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="nickname" class="col-sm-3 control-label">姓名</label>
                         <div class="col-sm-6">
-                          <input type="text" required class="form-control" id="nickname" value="<?=$nickname?>" name='nickname'>
+                          <input type="text" required class="form-control" id="nickname"  name='nickname'>
                         </div>
                       </div>
                       <div class="form-group">
@@ -49,22 +59,27 @@ if ($_SESSION['admin'] == "OK") {
                           <input type="password" required class="form-control" id="password" placeholder="Password" name="password">
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="password" class="col-sm-3 control-label">重新输入密码</label>
+                        <div class="col-sm-6">
+                          <input type="password" required class="form-control" id="password" placeholder="Password" name="password">
+                        </div>
+                      </div>
                     <div class="col-sm-3 col-sm-offset-3">
-                        <input type="submit" name="submit" class="btn btn-success pull-left" value='修改'>
+                        <input type="submit" name="submit" class="btn btn-success pull-left" value='添加'>
                         <input type="reset" name="B2" class="btn btn-default pull-left" value='重置'>
-                        <input type="hidden" name="id" value=<?= $_GET['id'];?>>
                     </div>
                   </form>
+
+                </div>
                 <?php
             } else
                 header("location:login.php");
-            mysql_close();
             ?>
-        </div>
         <!-- 页脚-版权信息-Start  -->
-        <?php
+            <?php
             include_once 'foot.php'; //插入foot.php页脚信息
-        ?>
+            ?>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

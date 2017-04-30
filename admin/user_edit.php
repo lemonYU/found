@@ -12,7 +12,7 @@ if ($_SESSION['admin'] == "OK") {
 <head>
     <meta charset="UTF-8">
     <title>ime-index</title>
-    <meta name="viewport" content="width=device-width,initial-scal=1,maxmum-scal=1,user-scalable=no">
+   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/public/admin/css/style.css">
@@ -62,6 +62,12 @@ if ($_SESSION['admin'] == "OK") {
                           <input type="password" required class="form-control" id="password" placeholder="Password" name="password">
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="password1" class="col-sm-3 control-label">重新输入密码</label>
+                        <div class="col-sm-6">
+                          <input type="password" required class="form-control" id="password1" placeholder="Password" name="password">
+                        </div>
+                      </div>
                     <div class="col-sm-3 col-sm-offset-3">
                         <input type="submit" name="submit" class="btn btn-success pull-left" value='修改'>
                         <input type="reset" name="B2" class="btn btn-default pull-left" value='重置'>
@@ -81,4 +87,12 @@ if ($_SESSION['admin'] == "OK") {
             ?>
         <!-- 页脚-版权信息-End  -->
     </body>
+    <script>
+    $('#password1').blur(function(event) {
+      /* Act on the event */
+      if($(this).val()==$('#password').val()){
+        alert('两次输入密码不一致，请重新输入！')
+      }
+    });
+    </script>
 </html>

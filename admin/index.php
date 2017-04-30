@@ -2,19 +2,18 @@
 
 #管理 - 首页
 
-session_start();
-include_once '../inc/conn.php';
+  session_start();
+  include_once '../inc/conn.php';
 
-if ($_SESSION['admin'] == "OK") {
-
-    ?>
+  if ($_SESSION['admin'] == "OK") {
+?>
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>ime-index</title>
-    <meta name="viewport" content="width=device-width,initial-scal=1,maxmum-scal=1,user-scalable=no">
+   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
     <link rel="stylesheet" href="/public/admin/css/style.css">
@@ -124,13 +123,11 @@ if ($_SESSION['admin'] == "OK") {
             ?>
         </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
-            <?php
-            include_once 'foot.php'; //插入foot.php页脚信息
-            ?>
-        </div>
+        <?php
+          include_once 'foot.php'; //插入foot.php页脚信息
+        ?>
         <!-- 页脚-版权信息-End  -->
     </body>
+
 </html>
 
