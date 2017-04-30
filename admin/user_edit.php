@@ -40,7 +40,7 @@ if ($_SESSION['admin'] == "OK") {
 
 ?>
                 <p id="hr"></p>
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-md-10">
                     <h4 align="center">用户信息管理</h4>
 
                     <form class="form-horizontal" action="uppassword.php" method="post" >

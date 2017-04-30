@@ -1,11 +1,11 @@
 <?php
 
-#管理 - 信息列表
+    #管理 - 信息列表
 
-session_start();
-ob_start();
-include_once '../inc/conn.php';
-include_once '../inc/order_sql.php';
+    session_start();
+    ob_start();
+    include_once '../inc/conn.php';
+    include_once '../inc/order_sql.php';
 ?>
 <!doctype html>
 <html lang="en" ng-app="app">
@@ -26,23 +26,43 @@ include_once '../inc/order_sql.php';
     </head>
     <body>
         <?php include 'head.php';?>
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-md-10">
                 <!-- 面板 -->
                 <div class="panel">
                     <div class="panel-heading clearfix">
+                        <?php
+                            $catagray = isset($_GET['info'])?$_GET['info']:'';
+                            if($catagray=='zhaoling'){
+                                 echo "<h3 class='pull-left'>招领<small> 招领信息管理</small></h3>
+                                 <!-- 面包屑导航 -->
+                                <ol class='breadcrumb pull-right'>
+                                    <li>
+                                        <span class='glyphicon glyphicon-menu-hamburger'></span>
+                                        <a href='#'>管理中心</a>
+                                    </li>
+                                    <li>
+                                        <a href='#'>招领信息管理</a>
+                                    </li>
+                                    <li class='active'>招领信息列表</li>
+                                </ol>";
+                            }else if($catagray=='guashi'){
+                                 echo "<h3 class='pull-left'>挂失<small> 挂失信息管理</small></h3>
+                                 <!-- 面包屑导航 -->
+                                    <ol class='breadcrumb pull-right'>
+                                        <li>
+                                            <span class='glyphicon glyphicon-menu-hamburger'></span>
+                                            <a href='#'>管理中心</a>
+                                        </li>
+                                        <li>
+                                            <a href='#'>挂失信息管理</a>
+                                        </li>
+                                        <li class='active'>挂失信息列表</li>
+                                    </ol>";
+                            }else{
+                                echo '';
+                            }
+                        ?>
 
-                        <h3 class='pull-left'>分类列表 <small>分类</small></h3>
-                        <!-- 面包屑导航 -->
-                        <ol class="breadcrumb pull-right">
-                            <li>
-                                <span class=' glyphicon glyphicon-dashboard'></span>
-                                <a href="#">管理中心</a>
-                            </li>
-                            <li>
-                                <a href="#">分类</a>
-                            </li>
-                            <li class="active">分类列表</li>
-                        </ol>
                     </div>
                 </div>
             <?php
@@ -52,52 +72,21 @@ include_once '../inc/order_sql.php';
                 include_once '../page.php';
                 ?>
                 <p id="hr"></p>
-<!--                 <table width='60%' id='cow' cellspacing='0' cellpadding='0'>
-                    <tr>
-                        <td valign='top'>
-                            <table width='100%' cellspacing='1' cellpadding='2'>
-                                <tr align='left'>
-                                    <td width='6%' class='infobr'><strong>
-                                            <form action='admin_list.php' id="filterForm">
-                                                <select name='info' onchange="document.getElementById('filterForm').submit()">
-                                                    <option value=''>选择</option>
-                                                    <option value='guashi'>挂失</option>
-                                                    <option value='zhaoling'>招领</option>
-                                                    <option value='all'>全部</option>
-                                                </select>
-                                            </form>
-                                        </strong></td>
-                                    <td width='37%' class='infobr'><strong>标题：</strong></td>
-                                    <td width='17%' class='infobr'><strong>用户名：</strong></td>
-                                    <td width='14%' class='infobr'><strong>IP：</strong></td>
-                                    <td width='18%' class='infobr'><strong>发布时间：</strong></td>
-                                    <td width='4%' class='infobr'></td>
-                                    <td width='4%' class='infobr'></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table> -->
-
-                                <!-- 表格 -->
                 <div class="ime-wrap">
                     <div class="ime-tab clearfix">
                         <a href="/admin/cats/add" type="button" class="btn-add btn btn-default pull-right">
-                            添加分类
+                            添加信息
                         </a>
-
                         <div class="ime-inner" ng-controller="myCtrl">
-
                             <table class='table table-bordered table-hover text-center'>
                                 <thead>
-
-                                <tr>
-                                    <th>序号</th>
-                                    <th>分类</th>
-                                    <th>发布人</th>
-                                    <th>发布时间</th>
-                                    <th>操作</th>
-                                </tr>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>分类</th>
+                                        <th>发布人</th>
+                                        <th>发布时间</th>
+                                        <th>操作</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
 
@@ -130,9 +119,7 @@ include_once '../inc/order_sql.php';
                                     </td>
                                 </tr>
                                <?php endwhile;?>
-
                                 </tbody>
-
                             </table>
                         </div>
 

@@ -26,21 +26,21 @@ include_once '../inc/info_user.php';
     </head>
     <body>
         <?php include 'head.php';?>
-        <div class="col-lg-10">
+        <div class="col-lg-10 col-md-10">
                 <!-- 面板 -->
                 <div class="panel">
                     <div class="panel-heading clearfix">
-                        <h3 class="pull-left">分类列表 <small>分类</small></h3>
+                        <h3 class="pull-left">用户信息<small> 管理</small></h3>
                         <!-- 面包屑导航 -->
                         <ol class="breadcrumb pull-right">
                             <li>
-                                <span class=' glyphicon glyphicon-dashboard'></span>
+                                <span class='glyphicon glyphicon-menu-hamburger'></span>
                                 <a href="#">管理中心</a>
                             </li>
                             <li>
-                                <a href="#">分类</a>
+                                <a href="#">用户管理</a>
                             </li>
-                            <li class="active">分类列表</li>
+                            <li class="active">用户信息编辑</li>
                         </ol>
                     </div>
                 </div>
@@ -51,34 +51,6 @@ include_once '../inc/info_user.php';
                 // include_once '../page.php';
                 ?>
                 <p id="hr"></p>
-<!--                 <table width='60%' id='cow' cellspacing='0' cellpadding='0'>
-                    <tr>
-                        <td valign='top'>
-                            <table width='100%' cellspacing='1' cellpadding='2'>
-                                <tr align='left'>
-                                    <td width='6%' class='infobr'><strong>
-                                            <form action='admin_list.php' id="filterForm">
-                                                <select name='info' onchange="document.getElementById('filterForm').submit()">
-                                                    <option value=''>选择</option>
-                                                    <option value='guashi'>挂失</option>
-                                                    <option value='zhaoling'>招领</option>
-                                                    <option value='all'>全部</option>
-                                                </select>
-                                            </form>
-                                        </strong></td>
-                                    <td width='37%' class='infobr'><strong>标题：</strong></td>
-                                    <td width='17%' class='infobr'><strong>用户名：</strong></td>
-                                    <td width='14%' class='infobr'><strong>IP：</strong></td>
-                                    <td width='18%' class='infobr'><strong>发布时间：</strong></td>
-                                    <td width='4%' class='infobr'></td>
-                                    <td width='4%' class='infobr'></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table> -->
-
-                                <!-- 表格 -->
                 <div class="ime-wrap">
                     <div class="ime-tab clearfix">
                         <a href="/admin/cats/add" type="button" class="btn-add btn btn-default pull-right">
@@ -143,12 +115,9 @@ mysql_close();
 ?>
         </div>
         <!-- 页脚-版权信息-Start  -->
-        <div id="footer" >
-            ﻿<p id="hr"></p>
-<?php
-include_once 'foot.php'; //插入foot.php页脚信息
-?>
-        </div>
+        <?php
+        include_once 'foot.php'; //插入foot.php页脚信息
+        ?>
         <!-- 页脚-版权信息-End  -->
     </body>
 </html>

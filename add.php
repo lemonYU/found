@@ -1,20 +1,17 @@
 <?php
-
-#添加数据的页面
-
-include_once 'inc/info_web.php';    //网站信息
-include_once 'inc/info_ad.php';     //广告
+    #添加数据的页面
+    include_once 'inc/info_web.php';    //网站信息
+    include_once 'inc/info_ad.php';     //广告
 ?>
 
-    <!-- 页顶-栏目信息-Start  -->
-
-    <?php
-     include_once 'head.php';
-    ?>
+<!-- 页顶-栏目信息-Start  -->
+<?php
+    include_once 'head.php';
+?>
 
     <!-- 页顶-栏目信息-End  -->
     <div class='lmInfo'>
-        <h4 class="title" id="title" align='center'><?= $addname; ?></h4>
+        <br><h4 class="title" id="title" align='center'><?= $addname; ?></h4>
 
           <form class="form-horizontal" action="add_updata.php" method="post" name="leavemsg" id="leavemsg">
 
@@ -63,20 +60,19 @@ include_once 'inc/info_ad.php';     //广告
 
 	      <!--描述-->
 		  <div class="form-group">
-
 		      <label for="post_info" class="col-sm-2 control-label">描述</label>
 		      <div class="col-sm-10">
 		      	<textarea class="form-control" rows="3" name="post_info" id="post_info" placeholder="添加一点描述吧..."></textarea>
 		      </div>
 		  </div>
-
-
-		  <div class="col-sm-2 ">
-			     <!--<button type="submit" class="btn btn-default">Submit</button>-->
+		  <!-- <div class="col-sm-2">
 			    <input type="submit" name="submit" class="btn btn-default pull-left" value='提交'>
 			    <input type="reset" name="B2" class="btn btn-default pull-left" value='清空'>
-
-		  </div>
+		  </div> -->
+          <div class="col-sm-2 col-sm-offset-2">
+                <input type="submit" name="submit" class='btn btn-default' value='提交'>
+                <input type="reset" name="B2" class='btn btn-default' value='清空'>
+          </div>
 
 		</form>
 

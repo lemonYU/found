@@ -31,7 +31,7 @@
                             <p>注册于2013年9月01日</p>
                         </a>
                     </li>
-                    <li class="login-btn">
+                    <li class="login-btn" style="white-space:nowrap">
                         <a href="admin_pw.php?id=<?= $id;?>" role="button" type="button" class="btn btn-primary">
                             用户信息
                         </a>
@@ -48,7 +48,7 @@
     <!-- 內容部分 -->
     <div class="container-fluid">
         <div class="row" style="height:100%">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2">
                 <!-- 用户信息 -->
                 <div class="user clearfix">
                     <div class="pic pull-left">
@@ -71,7 +71,7 @@
                 <div class="panel">
                     <div class="panel-heading">
                         <a href="#">
-                            <span class=' glyphicon glyphicon-dashboard'></span>
+                            <span class='glyphicon glyphicon-hand-down'></span>
                             控制台
                         </a>
                     </div>
@@ -79,7 +79,7 @@
 
                 <!-- 列表組 -->
                 <ul class='list-group' id="accordion">
-                    <li class='list-group-item'>
+                    <!-- <li class='list-group-item'>
                         <a href="#catagory" class='ime-click' data-toggle="collapse"  aria-expanded="true" data-parent="#accordion">
                             <span class='glyphicon glyphicon-th-large'></span>
                             分类
@@ -100,30 +100,30 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
                      <li class='list-group-item'>
                         <a href="admin_list.php?info=zhaoling"  class='ime-click'>
-                            <span class='glyphicon glyphicon-tag'></span>
+                            <span class='glyphicon glyphicon-heart'> </span>
                             招领信息管理
                         </a>
                     </li>
                      <li class='list-group-item'>
                         <a href="admin_list.php?info=guashi"  class='ime-click'>
-                            <span class='glyphicon glyphicon-tag'></span>
+                            <span class='glyphicon glyphicon-send'> </span>
                             挂失信息管理
                         </a>
                     </li>
                     <li class='list-group-item'>
                         <a href="admin_info.php"  class='ime-click'>
-                            <span class='glyphicon glyphicon-tag'></span>
-                            自定义网站信息
+                            <span class='glyphicon glyphicon-pencil'> </span>
+                            网站信息管理
                         </a>
                     </li>
 
                     <li class='list-group-item'>
                         <a href="user_list.php"  class='ime-click'>
-                            <span class='glyphicon glyphicon-tag'></span>
+                            <span class='glyphicon glyphicon-user'> </span>
                             用户管理
                         </a>
                     </li>

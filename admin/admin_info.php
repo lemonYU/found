@@ -35,8 +35,7 @@ if ($_SESSION['admin'] == "OK") {
 <?php require_once 'head.php';?>
                 <p id="hr"></p>
 <div class="col-lg-10">
-        <h4>失物信息编辑</h4>
-        <p id="hr"></p>
+        <h4 align='center'>失物信息编辑</h4><br>
         <form class="form-horizontal"  action="updata.php" method="post" name="name1" id="name1">
 
             <!--网站标题-->

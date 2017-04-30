@@ -48,9 +48,9 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
     <div class="col-lg-10">
         <?php
             if (($rs->fabu) == '1') {
-                echo "<h4 align='center'>挂失信息编辑</h4>";
+                echo "<br><h4 align='center'>挂失信息编辑</h4><br>";
             } else {
-                echo "<h4 align='center'>招领信息编辑</h4>";
+                echo "<br><h4 align='center'>招领信息编辑</h4><br>";
             }
         ?>
 
@@ -99,7 +99,7 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
 
               <label for="user_qq" class="col-sm-2 control-label">联系QQ</label>
               <div class="col-sm-8">
-                <input type="text" required class="form-control" name="user_name" id="user_name" value='<?= $qq ?>'>
+                <input type="text" required class="form-control" name="user_qq" id="user_qq" value='<?= $qq ?>'>
 
               </div>
           </div>
@@ -133,7 +133,6 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
           <div class="col-sm-2 col-sm-offset-2">
                 <input type="submit" name="submit" class="btn btn-success pull-left" value='修改'>
                 <input type="reset" name="B2" class="btn btn-default pull-left" value='重置'>
-
           </div>
 
         </form>

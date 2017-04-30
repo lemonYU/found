@@ -25,12 +25,10 @@ include_once '../inc/info_ad.php';
     <style>
         th{cursor: pointer;}
     </style>
-    </head>
-    <body>
-        <script>
-            setTimeout("location.href='../'", 3000);
-        </script>
-    </head>
+    <script>
+        setTimeout("location.href='../'", 3000);
+    </script>
+</head>
     <body>
         <div align="center">
             <p class="title" id="title"><?= $webname; ?></p>
