@@ -21,6 +21,7 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
 <head>
     <meta charset="utf-8">
     <title><?= $topic; ?><?= $webname; ?></title>
+    <link rel="icon" href="/public/img/an.ico" type="image/x-icon" />
    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <link href="/../favicon.ico" rel="shortcut icon">
     <link href="/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
