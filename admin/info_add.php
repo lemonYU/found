@@ -2,9 +2,9 @@
 #修改信息
 
 session_start();
-if (($_SESSION['admin'] == "OK")) {
+if ($_SESSION['admin'] == "OK") {
     include_once '../inc/conn.php';
-
+ }
 ?>
 <!doctype html>
 <html lang="en" ng-app="app">

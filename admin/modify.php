@@ -35,7 +35,6 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
     <link rel="stylesheet" href="/public/admin/css/style.css">
     <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
     <script src='/public/admin/js/bootstrap.min.js'></script>
-    <script src="/public/admin/js/angular.min.js"></script>
     <script src='/public/admin/js/manager.js'></script>
     <style>
         th{cursor: pointer;}
@@ -69,12 +68,22 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
           <div class="form-group">
             <label class="col-sm-2 control-label">分类</label>
             <div class="col-sm-8">
-                <label class="radio-inline">
-                  <input type="radio" name="post_fabu" <?php if($leibie=='挂失'){echo 'checked';}?> id="post_fabu" value="1">挂失
-                </label>
-                <label class="radio-inline">
+                
+                  <!-- <input type="radio" name="post_fabu" <?php if($leibie=='挂失'){echo 'checked';}?> id="post_fabu" value="1">挂失 -->
+                  <?php if($leibie=='挂失'){
+                    echo "<label class='radio-inline'><input type='radio' name='post_fabu' checked id='post_fabu' value='1'>挂失
+                    </label>";
+                    }
+                  ?>
+                 <?php if($leibie=='招领'){
+                    echo "<label class='radio-inline'><input type='radio' name='post_fabu' checked id='post_fabu' value='2'>招领
+                    </label>";
+                    }
+                  ?>
+                
+               <!--  <label class="radio-inline">
                   <input type="radio" name="post_fabu" <?php if($leibie=='招领'){echo 'checked';}?> id="post_fabu" value="2">招领
-                </label>
+                </label> -->
 
             </div>
           </div>

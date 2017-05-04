@@ -22,12 +22,21 @@ if ($_SESSION['admin'] == "OK") {
     <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
     <script src='/public/admin/js/bootstrap.min.js'></script>
     <script src="/public/admin/js/jquery.particleground.min.js"></script>
-    <!--<style>
-	    body{background:url(/public/admin/img/login-background.jpg) center center;}
+    <style>
+	    /*body{background:url(/public/admin/img/login-background.jpg) center center;}
 	    .login{width:330px;background:rgba(255,255,255,0.2);border-radius: 3px;margin-top: 100px;padding:10px 30px 20px;margin-bottom: 30px;}
-	    .login h3{text-align: center;}
-
-    </style>-->
+	    .login h3{text-align: center;}*/
+        body {
+          background: #16a085;
+          font-family: 'Montserrat', sans-serif;
+          color: #fff;
+          line-height: 1.3;
+          -webkit-font-smoothing: antialiased;
+        }
+        .title{
+            font-family: '微软雅黑';
+        }
+    </style>
 </head>
 <body>
 	<div id="particles">

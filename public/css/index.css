@@ -6,12 +6,12 @@ body,.page-title{
   margin: 53px auto 0px;
 }
 .logo{
-	width: 74px;
+	width: 100px;
 	height: 50px;
-	background:#019199 url(../img/logo.png) no-repeat;
+	background:url(../img/heart.png) no-repeat center 5px;
 }
 .logo:hover{
-	background:#019199 url(../img/logo.png) no-repeat!important;
+	background:#019199 url(../img/heart.png) no-repeat center 5px!important;
 }
 .navbar {
      margin-bottom: 0px;

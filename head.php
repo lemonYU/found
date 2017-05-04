@@ -22,7 +22,7 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
     <meta charset="utf-8">
     <title><?= $topic; ?><?= $webname; ?></title>
     <link rel="icon" href="/public/img/an.ico" type="image/x-icon" />
-   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <link href="/../favicon.ico" rel="shortcut icon">
     <link href="/public/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
     <link href="/public/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
@@ -31,7 +31,9 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
     <link href="/public/css/common.css" rel="stylesheet" type="text/css" media="all"/>
     <!--<link href="/css/reset.css" rel="stylesheet" type="text/css" media="all"/>-->
     <link href="/public/css/index.css" rel="stylesheet" type="text/css" media="all"/>
-
+    <script src='/public/js/jquery.min.js'></script>
+    <script src='/public/js/bootstrap.min.js'></script>
+    <script src='/public/js/manager.js'></script>
 </head>
 <body>
 
