@@ -7,21 +7,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
-                <h2>Lost & Found</h2>
+                <h2> <?= $webname?></h2>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="widget">
                     <h6 class="title">友情链接</h6>
                     <hr>
                     <ul class="link-list recent-posts">
-                        <li>
-                            <?= $webname?>
-                        </li>
+
                         <li>
                             <a href="https://github.com/yingliyu/" target="_blank">github</a>
                         </li>
                         <li>
                             <a href="http://www.cnblogs.com/imelemon/" target="_blank">博客园</a>
+                        </li>
+                        <li>
+                            <a href="http://sighttp.qq.com/msgrd?v=3&uin=<?= $webqq; ?>&Site=http://bbs.oupag.com&Menu=yes" target="_blank"><?= $webqq; ?></a>
+                        </li>
+                        <li>
+                            </a> E-mail：<a href=" mailto:<?= $webmail; ?>" target="_blank"><?= $webmail; ?></a>
                         </li>
                     </ul>
                 </div>
@@ -31,7 +35,7 @@
         <!--end of row-->
         <div class="row">
             <div class="col-sm-6">
-                <span class="sub">Copyright ©2017 鱼忘七秒</span>
+                <span class="sub">Copyright ©2017 lemon</span>
             </div>
             <div class="col-sm-6 text-right">
 

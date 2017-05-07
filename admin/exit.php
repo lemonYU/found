@@ -1,4 +1,5 @@
-<?php
+
+.3+<?php
 
 #退出
 
@@ -25,14 +26,14 @@ include_once '../inc/info_ad.php';
         th{cursor: pointer;}
     </style>
     <script>
-        setTimeout("location.href='../'", 3000);
+        setTimeout("location.href='login.php'", 3000);
     </script>
 </head>
     <body>
         <div align="center">
             <p class="title" id="title"><?= $webname; ?></p>
 
-            <div style="color:#FF0000"><b>您已退出管理，正在返回网站首页……</b></div>
+            <div style="color:#FF0000"><b>您已退出管理，正在返回登录……</b></div>
         </div>
         <!-- 页脚-版权信息-Start  -->
         <div id="footer" >
