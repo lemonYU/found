@@ -84,11 +84,11 @@ include_once '../inc/info_user.php';
                                     <td><?php echo $rs->username; ?></td>
                                     <td><?php echo $rs->nickname; ?></td>
                                     <td>
-                                        <a href="user_edit.php?id=<?=$rs->id?>" type="button" class="btn btn-info">
+                                        <a href="user_edit.php?id=<?=$rs->id?>" type="button" class="btn btn-primary">
                                         <span class='glyphicon glyphicon-edit'></span>
                                         编辑
                                         </a>
-                                        <a href="/admin/cats/delete?id=<%= item._id %>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-danger">
+                                        <a href="user_delete.php?id=<?=$rs->id?>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-warning">
                                         <span class=' glyphicon glyphicon-trash'></span>
                                         删除
                                         </a>

@@ -1,6 +1,7 @@
 <!-- <div class=title><a href="index.php">后台首页</a> - <a href="admin_list.php">信息列表</a> - <a href="admin_info.php">网站信息</a> - <a href="admin_ad.php">广告管理</a> - <a href="admin_pw.php">密码修改</a></div> -->
 
 <!--头部-->
+
 <?php
 
     $exec2 = "select id,nickname from users where username='".$_SESSION['user']."'";
@@ -9,6 +10,63 @@
     $nickname = isset($res->nickname) ? $res->nickname : '';
     $id = isset($res->id) ? $res->id : '';
 ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ime-index</title>
+   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/public/admin/css/layer.css">
+    <link rel="stylesheet" href="/public/admin/css/style.css">
+    <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
+    <script src='/public/admin/js/bootstrap.min.js'></script>
+    <script src='/public/admin/js/manager.js'></script>
+    <script src='/public/layer/layer.js'></script>
+<style>
+    .ime-main .dropdown-menu .login-btn a{
+    display: inline-block!important;}
+     h1 { height:30px;line-height:30px;font-size:12px;padding-left:15px;background:#EEE;border-bottom:1px solid #ddd;border-right:1px solid #ddd;overflow:hidden;zoom:1;margin-bottom:10px;}
+      h1 b {color:#3865B8;}
+      h1 span {color:#ccc;font-size:10px;margin-left:10px;}
+
+      .list {
+        width:48%;
+        height:221px;
+        float:left;
+        margin:0px 15px 0 0;
+      }
+      .list ul{
+        border:1px #ddd solid;
+        overflow:hidden;
+        border-bottom:none;
+        margin-left: 0;
+        padding-left: 0;
+      }
+      .list ul li {
+        border-bottom:1px #ddd solid; height:26px;
+        overflow:hidden;
+        zoom:1;
+        line-height:26px;
+        color:#777;
+        padding-left:5px;
+        list-style:none
+      }
+      .list ul li span{ display:block; float:left; color:#777;width:100px;}
+      .list ul li span, .list ul li{ font-size:12px;}
+      .ime-main .col-lg-10 .panel-heading, .ime-main .col-lg-12 .panel-heading {
+    padding: 15px 15px;
+}
+  .ime-main .col-lg-10 .panel, .ime-main .col-lg-12 .panel {
+    height: auto;
+  }
+  .ime-main .col-lg-10 .panel {
+    margin-bottom: 0px;
+}
+</style>
+</head>
+<body>
 <div class='ime-main'>
     <nav class="navbar navbar-default">
         <div class="container-fluid clearfix">
@@ -18,6 +76,7 @@
                 <span class="glyphicon glyphicon-menu-hamburger"></span>
             </button>
             <div class="dropdown pull-right">
+                <a href="http://found.com/index.php" style="padding-right:1rem;">首页</a>
                 <a class=" rLink dropdown-toggle"  data-toggle="dropdown" role="button" >
                     <span class=' glyphicon glyphicon-user'></span>
                        <?php echo $nickname;?>
@@ -104,7 +163,8 @@
 
                      <li class='list-group-item'>
                         <a href="admin_list.php?info=zhaoling"  class='ime-click'>
-                            <span class='glyphicon glyphicon-heart'> </span>
+                            <!-- <span class='glyphicon glyphicon-heart'> </span> -->
+                            <span class="glyphicon glyphicon-gift"></span>
                             招领信息管理
                         </a>
                     </li>

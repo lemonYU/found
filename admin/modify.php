@@ -23,24 +23,7 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
         $leibie = '招领';
     }
     ?>
-<!doctype html>
-<html lang="en" ng-app="app">
-<head>
-    <meta charset="UTF-8">
-    <title>失物招领</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
-    <link rel="stylesheet" href='/public/css/common.css'>
-    <link rel="stylesheet" href="/public/admin/css/style.css">
-    <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
-    <script src='/public/admin/js/bootstrap.min.js'></script>
-    <script src='/public/admin/js/manager.js'></script>
-    <style>
-        th{cursor: pointer;}
-    </style>
-</head>
-    <body>
+
     <?php
     include_once 'head.php';
     ?>
@@ -68,8 +51,8 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
           <div class="form-group">
             <label class="col-sm-2 control-label">分类</label>
             <div class="col-sm-8">
-                
-                  <!-- <input type="radio" name="post_fabu" <?php if($leibie=='挂失'){echo 'checked';}?> id="post_fabu" value="1">挂失 -->
+
+
                   <?php if($leibie=='挂失'){
                     echo "<label class='radio-inline'><input type='radio' name='post_fabu' checked id='post_fabu' value='1'>挂失
                     </label>";
@@ -80,11 +63,6 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
                     </label>";
                     }
                   ?>
-                
-               <!--  <label class="radio-inline">
-                  <input type="radio" name="post_fabu" <?php if($leibie=='招领'){echo 'checked';}?> id="post_fabu" value="2">招领
-                </label> -->
-
             </div>
           </div>
             <!--标题-->
@@ -118,12 +96,11 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
 
               <label for="user_tel" class="col-sm-2 control-label">联系电话</label>
               <div class="col-sm-8">
-                <input type="text" required class="form-control" name="user_tel" id="user_tel" value="<?= $tel ?>">
+                <input type="text" required class="form-control" name="user_tel" id="user_tel" pattern="^1[34578]\d{9}$" value="<?= $tel ?>">
               </div>
           </div>
            <!--ip-->
           <div class="form-group">
-
               <label for="user_tel" class="col-sm-2 control-label">IP</label>
               <div class="col-sm-8">
                 <input type="text" required class="form-control" value="<?= $ip ?>">
@@ -135,7 +112,7 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
 
               <label for="post_info" class="col-sm-2 control-label">描述</label>
               <div class="col-sm-8">
-                <textarea class="form-control" rows="3" name="post_info" id="post_info"><?= $info ?></textarea>
+                <textarea class="form-control" required rows="3" name="post_info" id="post_info"><?= $info ?></textarea>
               </div>
           </div>
 

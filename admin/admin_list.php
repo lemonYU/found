@@ -1,30 +1,12 @@
 <?php
 
     #管理 - 信息列表
-
     session_start();
     ob_start();
     include_once '../inc/conn.php';
     include_once '../inc/order_sql.php';
+    include 'head.php';
 ?>
-<!doctype html>
-<html lang="en" ng-app="app">
-<head>
-    <meta charset="UTF-8">
-    <title>失物招领</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-    <link rel="stylesheet" href='/public/admin/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="/public/admin/css/style.css">
-    <script src='/public/admin/js/jquery-1.11.3.min.js'></script>
-    <script src='/public/admin/js/bootstrap.min.js'></script>
-    <script src='/public/admin/js/manager.js'></script>
-    <style>
-        th{cursor: pointer;}
-    </style>
-    </head>
-    <body>
-        <?php include 'head.php';?>
         <div class="col-lg-10 col-md-10">
                 <!-- 面板 -->
                 <div class="panel">
@@ -65,12 +47,10 @@
                     </div>
                 </div>
             <?php
-            if ($_SESSION['admin'] == "OK") {
-                include_once 'head.php';
-                include_once '../pagesql.php';
-                include_once '../page.php';
-                ?>
-                <p id="hr"></p>
+                if ($_SESSION['admin'] == "OK") {
+                    include_once '../pagesql.php';
+                    include_once '../page.php';
+            ?>
                 <div class="ime-wrap">
                     <div class="ime-tab clearfix">
                         <a href="info_add.php?info=<?=$_GET['info']?>" type="button" class="btn-add btn btn-success pull-right">
@@ -107,11 +87,11 @@
                                     <td><?php echo $rs->name; ?></td>
                                     <td><?php echo $rs->time; ?></td>
                                     <td>
-                                        <a href="modify.php?id=<?=$rs->id?>" type="button" class="btn btn-info">
+                                        <a href="modify.php?id=<?=$rs->id?>" type="button" class="btn btn-primary">
                                         <span class='glyphicon glyphicon-edit'></span>
                                         编辑
                                         </a>
-                                        <a href="delete.php?id=<?=$rs->id?>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-danger">
+                                        <a href="delete.php?id=<?=$rs->id?>"  onclick="return confirm('确认删除吗?');" type="button" class="btn btn-warning">
                                         <span class=' glyphicon glyphicon-trash'></span>
                                         删除
                                         </a>
