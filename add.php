@@ -2,12 +2,10 @@
     #添加数据的页面
     include_once 'inc/info_web.php';    //网站信息
     include_once 'inc/info_ad.php';     //广告
+    include_once 'head.php';
 ?>
 
 <!-- 页顶-栏目信息-Start  -->
-<?php
-    include_once 'head.php';
-?>
 
     <!-- 页顶-栏目信息-End  -->
     <div class='lmInfo'>
