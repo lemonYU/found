@@ -64,6 +64,19 @@
   .ime-main .col-lg-10 .panel {
     margin-bottom: 0px;
 }
+input[type="submit"], button[type="submit"] {
+    /* height: 50px; */
+    /* line-height: 48px; */
+    border: 2px solid #019199;
+    background: #019199;
+    color: #fff;
+    width: auto;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
 </style>
 </head>
 <body>

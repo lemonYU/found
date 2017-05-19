@@ -88,35 +88,6 @@
   </div>
 </div>
 
-<!--
-              <div class="list">
-                <h1><b>个人信息</b><span>Profile&nbsp; Info</span></h1>
-                <ul>
-                  <li><span>用户帐号:</span><?php echo isset($username )?$username:'';?></li>
-                  <li><span>用户角色:</span></li>
-                  <li><span>上次登陆IP:</span><?php echo isset($ip )?$ip:'';?></li>
-                  <li><span>上次登陆时间:</span><?php echo isset($lastlogintime )?$lastlogintime:'';?></li>
-                </ul>
-              </div>
-              <div class="list">
-                <h1><b>系统信息</b><span>System&nbsp; Info</span></h1>
-                <ul>
-                  <li><span>操作系统:</span><?php echo $system_info['0']; ?></li>
-                  <li><span>运行方式:</span><?php echo $system_info['1']; ?></li>
-                  <li><span>PHP版本:</span><?php echo $system_info['3']; ?></li>
-                  <li><span>MYSQL版本:</span><?php echo $system_info['2']; ?></li>
-                  <li><span>上传限制:</span><?php echo $system_info['4']; ?></li>
-                </ul>
-              </div>
-              <div class="list">
-                <h1><b>作者信息</b><span>Compamay&nbsp; Info</span></h1>
-                <ul>
-                  <li><span>官方网站:</span><a target="_blank" href="http://www.hhailuo.com/">www.lemon.com</a></li>
-                  <li><span>创作人:</span>Lemon</li>
-                </ul>
-              </div>
- -->
-
             <?php
             } else
                 header("location:login.php");
