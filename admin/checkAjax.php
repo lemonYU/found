@@ -11,6 +11,11 @@ $exec = "select password from users where username='$username'";
             if ($rs->password == $passwords) {//检查登陆密码
                 $_SESSION['admin'] = "OK"; //检查登陆用户
                 $_SESSION['user'] = $username;
+                $t = time();    
+                $data = date("Y-m-d H:i:s", $t);
+                $ip = $_SERVER['REMOTE_ADDR'];
+                $exec="update users set  lastlogintime='".$data."', lastloginip='".$ip."' where username="."'".$_POST['username']."'";
+                $result=mysql_query($exec);
                 $data = array(
                     "status"=>'1',
                     "message"=>'信息正确'

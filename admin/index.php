@@ -1,12 +1,13 @@
 <?php
 
 #管理 - 首页
-
   session_start();
   include_once '../inc/conn.php';
   if ($_SESSION['admin'] == "OK") {
   require_once 'head.php';
-
+  $exec = "select * from users where username="."'".$_SESSION['user']."'";
+  $result = mysql_query($exec);
+  $res = mysql_fetch_object($result);
   $system_info = array(
       '0' => PHP_OS,
       '1' => php_sapi_name(),
@@ -20,7 +21,6 @@
         <div class="panel">
             <div class="panel-heading clearfix">
                 <h3 class="pull-left">管理中心 <small>控制台</small></h3>
-                   
                 <!-- 面包屑导航 -->
                 <ol class="breadcrumb pull-right">
                   <li>
@@ -79,10 +79,10 @@
     </div>
     <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
       <ul class="panel-body">
-          <li><span>用户帐号：</span><?php echo isset($username )?$username:'';?></li>
-          <li><span>用户角色：</span></li>
-          <li><span>上次登陆IP：</span><?php echo isset($ip )?$ip:'';?></li>
-          <li><span>上次登陆时间：</span><?php echo isset($lastlogintime )?$lastlogintime:'';?></li>
+          <li><span>用户帐号：</span><?php echo isset($_SESSION['user'])?$_SESSION['user']:'';?></li>
+          
+          <li><span>上次登陆IP：</span><?php echo isset($res->lastloginip)?$res->lastloginip:'';?></li>
+          <li><span>上次登陆时间：</span><?php echo isset($res->lastlogintime)?$res->lastlogintime:'';?></li>
       </ul>
     </div>
   </div>
