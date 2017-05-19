@@ -38,6 +38,7 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
 <body>
 
 <div class="main-container">
+
     <!--导航条start-->
     	<nav class="navbar navbar-default navbar-fixed-top fNavbar" >
           <div class="container-fluid">
@@ -55,22 +56,16 @@ if (isset($_GET['info']) && $_GET['info'] == 'guashi') {
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav" id='nav'>
-                <li class="active"><a href="index.php?info=zhaoling" class="color">招领 <span class="sr-only">(current)</span></a></li>
+                <li><a href="index.php?info=zhaoling" class="color">招领 <span class="sr-only">(current)</span></a></li>
                 <li><a href="index.php?info=guashi" class="color">寻物</a></li>
                 <li><a href="search.php" class="color">搜索</a></li>
-
+                <li><a href="add.php" class="color">快速发布</a></li>
               </ul>
-              <form class="navbar-form navbar-left">
+              <form class="navbar-form navbar-right" action='search.php' method='post'>
 
                 <input type="text" class="form-control navInput" placeholder="输入物品特征快速搜索">
                 <button type="button" class="btn btn-default publish">搜搜</button>
               </form>
-              <ul class="nav navbar-nav navbar-right">
-
-                <li><a href="add.php" class="color">快速发布</a></li>
-                <li><a href="about.php" class="color">关于我们</a></li>
-
-              </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>

@@ -24,18 +24,31 @@ $(function(){
             //}
         });
          $('.ime-click').hover(function(){
-            $(this).parent().css({'background':'#f9f9f9'})
+            $(this).parent().css({'background':'#f9f9f9'});
         },function(){
-            $(this).parent().css({'background':'#f4f4f4'})
+            $(this).parent().css({'background':'#f4f4f4'});
         })
     })();
     // 头部导航
     (function(){
-        $('.nav li a').click(function(e){
+        $('#nav li').click(function(e){
 
-            $(this).parent('li').addClass('active').siblings('li').removeClass('active');
+             $(this).addClass('clicked').siblings('li').removeClass('clicked');
+
+        });
+        $('#nav li').mouseenter(function(e){
+
+             $(this).addClass('clicked');
+           
+        }).mouseleave(function(){
+
+             var _index = $(this).index();
+            
+             $(this).siblings('li').removeClass('clicked');
+             $('#nav li').eq(_index).addClass('clicked');
         });
     }
 
     )();
+    
 });

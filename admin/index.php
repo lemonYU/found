@@ -20,6 +20,7 @@
         <div class="panel">
             <div class="panel-heading clearfix">
                 <h3 class="pull-left">管理中心 <small>控制台</small></h3>
+                   
                 <!-- 面包屑导航 -->
                 <ol class="breadcrumb pull-right">
                   <li>

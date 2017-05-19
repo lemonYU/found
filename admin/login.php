@@ -49,7 +49,7 @@ if ($_SESSION['admin'] == "OK") {
 			<p class='title' id='title' align='center'><?= $webname; ?></br>后台管理登陆</p>
 			<div class="login center-block">
 				<h2 align='center' style="font-family:'微软雅黑';">管理员登录</h2><br>
-				<form action="check.php" method="post" name='adminlogin' id='adminlogin'>
+				<form onsubmit="return false" method="post" name='adminlogin' id='adminlogin'>
 					<div class="form-group has-feedback">
 						<input type="text" name="username" id="username" class="form-control" placeholder="请输入用户名">
 						<span class='glyphicon glyphicon-user form-control-feedback'></span>
@@ -64,7 +64,7 @@ if ($_SESSION['admin'] == "OK") {
 	                    </label>
 					</div>
 
-					<button type="submit" class="submitBtn btn btn-success btn-block">登录</button>
+					<button type="submit" onclick="check()" class="submitBtn btn btn-success btn-block">登录</button>
 					<button type="reset" class="btn btn-primary btn-block">重置</button>
 
 				</form>
@@ -84,36 +84,38 @@ if ($_SESSION['admin'] == "OK") {
 		  $('.intro').css({
 		    'margin-top': -($('.intro').height() / 2)
 		  });
-          $('.submitBtn').click(function(event) {
-              var username = $('#username').val();
-              var paw = $('#password').val();
-              $.ajax({
-                url:"checkAjax.php",
-                data:{"username":username,'password':paw},
-                type:'post',
-                dataType:'json',
-                success:function(res){
-                    console.log(res)
-                    if(res.status == '0'){
-                        layer.confirm('<p style="color:#333">用户名或密码错误！<p>', {
-                                btn: ['确定']
-                            }, function(){
-                                window.location.href='login.php';
-                            });
-                        return false;
-                    }
-                    //$('.submitBtn').submit();
-
-                },
-                error:function(){
-                    alert('请求出错！');
-
-                }
-              })
-          });
-
+ 
 
 		});
+
+    function check(){
+                var username = $('#username').val();
+                var paw = $('#password').val();
+                $.ajax({
+                  url:"checkAjax.php",
+                  data:{"username":username,'password':paw},
+                  type:'post',
+                  dataType:'json',
+                  success:function(res){
+                      if(res.status == '0'){
+                          layer.confirm('<p style="color:#333">用户名或密码错误！<p>', {
+                                  btn: ['确定']
+                              }, function(){
+                                  window.location.href='login.php';
+
+                              });
+                   
+                      }else{
+                        window.location.href='index.php';
+
+                      }
+                      
+                  },
+                });
+
+          
+          // return false;
+          }
 
 </script>
 </html>

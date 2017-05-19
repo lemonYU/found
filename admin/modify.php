@@ -22,9 +22,7 @@ if (($_SESSION['admin'] == "OK") && isset($_GET['id'])) {
     } else {
         $leibie = '招领';
     }
-    ?>
-
-    <?php
+    
     include_once 'head.php';
     ?>
     <div class="col-lg-10">

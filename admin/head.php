@@ -120,12 +120,23 @@
                     </div>
                 </div>
                 <!-- 輸入框 -->
-                <div class="form-group has-feedback">
+
+                 <div id="myTime" align="center" style='background:#fff;border-right:1px solid #eee'>
+                      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="160" height="70" id="honehoneclock" align="middle">
+                            <param name="allowScriptAccess" value="always">
+                            <param name="movie" value="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.swf">
+                            <param name="quality" value="high">
+                            <param name="bgcolor" value="#f4f4f4">
+                            <param name="wmode" value="transparent">
+                            <embed wmode="transparent" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.swf" quality="high" bgcolor="#f4f4f4" width="160" height="70" name="honehoneclock" align="middle" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+                        </object>
+                    </div>
+               <!--  <div class="form-group has-feedback">
                     <input type="text" class="form-control" placeholder="操作">
                     <button type='submit' class='btn btn-default btn-link' style='cursor:pointer'>
                         <span class='glyphicon glyphicon-search form-control-feedback'></span>
                     </button>
-                </div>
+                </div> -->
                 <!-- 面板 -->
                 <div class="panel">
                     <div class="panel-heading">

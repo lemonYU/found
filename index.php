@@ -31,7 +31,7 @@
                 </div>
 
 				<div class="page-cate-title">
-	                <span class="title-text">最新失物招领启事及回复</span>
+	                <span class="title-text">最新失物招领启事</span>
 	            </div>
 
             </div>
@@ -42,12 +42,12 @@
            <!--  <?= $ad_top; ?> </br> --><!--顶部广告-->
             <!--栏目开始-->
 
-            <table class="table table-bordered table-hover text-center">
-                <thead>
+            <table class="table table-striped table-hover text-center">
+                <thead style='font-size:18px'>
                     <tr>
                         <td>分类</td>
                         <td>标题</td>
-                        <td>提交时间</td>
+                        <td>发布时间</td>
                     </tr>
                 </thead>
 
@@ -65,7 +65,7 @@
                 }
                 echo"
                 <tbody>
-    				<tr>
+    				<tr class='infoItem'>
     					<td>$leibie</td>
     					<td><a href='info.php?id=" . $rs->id . "' target='_blank' title='$rs->title'>$rs->title</a></td>
     					<td>$rs->time</td>
@@ -91,8 +91,8 @@
 
 
 <!-- 页脚-版权信息-Start  -->
-    ﻿<p id="hr"></p>
     <?php
     	 include_once 'foot.php'; //插入foot.php页脚信息
+        
     ?>
 <!-- 页脚-版权信息-End  -->

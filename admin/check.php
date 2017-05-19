@@ -17,25 +17,23 @@
 
                 //检查登陆密码
                 echo "<script>
-                    layer.confirm('密码错误<br>请重新输入！', {
+                    layer.confirm('密码错误请重新输入！', {
                         btn: ['确定']
                     }, function(){
                         window.location.href='login.php';
                     });
                     </script>";
-
             }
     }else{
-    include_once 'head.php';
-
-             //检查登陆用户
-            echo "<script>
-                    layer.confirm('用户名错误<br>请重新输入！', {
-                        btn: ['确定']
-                    }, function(){
-                        window.location.href='login.php';
-                    });
-                    </script>";
+        include_once 'head.php';
+         //检查登陆用户
+        echo "<script>
+                layer.confirm('用户名错误请重新输入！', {
+                    btn: ['确定']
+                }, function(){
+                    window.location.href='login.php';
+                });
+                </script>";
     }
 
     mysql_close();

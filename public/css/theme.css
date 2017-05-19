@@ -45,7 +45,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 13px;
   line-height: 24px;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #666;
   overflow-x: hidden;
 }
@@ -285,7 +285,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 h1,
 h2,
@@ -397,7 +397,7 @@ h6.uppercase,
   font-weight: 700;
 }
 .bold-h6 {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -463,7 +463,7 @@ a:hover {
   text-decoration: none;
 }
 .label {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -479,7 +479,7 @@ a:hover {
 }
 blockquote {
   overflow: hidden;
-  font-family: "Merriweather", "Georgia", Times New Roman, Times, serif;
+  font-family:"微软雅黑", "Merriweather", "Georgia", Times New Roman, Times, serif;
   font-size: 20px;
   line-height: 40px;
   font-style: italic;
@@ -499,7 +499,7 @@ blockquote .author {
   margin-top: 16px;
 }
 .number {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .columns-2 {
   column-count: 2;
@@ -719,11 +719,11 @@ footer.bg-dark li,
 }
 /*!---------- 6. BUTTONS ----------*/
 .btn {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 2px solid #019199;
   padding: 0 26px;
   height: 40px;
-  min-width: 150px;
+  /*min-width: 150px;*/
   line-height: 36px;
   font-size: 12px;
   font-weight: 700;
@@ -931,7 +931,7 @@ nav.bg-dark .logo-dark {
   right: 0;
   font-size: 11px;
   content: "\e64b";
-  font-family: 'themify';
+  font-family:"微软雅黑", 'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -941,7 +941,7 @@ nav.bg-dark .logo-dark {
 .menu {
   width: 100%;
   height: 55px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .menu.inline-block {
   width: auto;
@@ -1125,7 +1125,7 @@ nav.nav-centered .module.widget-handle {
   visibility: visible;
 }
 .module.widget-handle .title {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-size: 11px;
@@ -1690,7 +1690,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 input[type="text"],
 button,
@@ -1713,7 +1713,7 @@ input[type="password"] {
   outline: 1px red !important;
 }
 .input-with-label span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   color: #292929;
@@ -1814,11 +1814,11 @@ button[type="submit"] {
   background: #019199;
   color: #fff;
   width: 100%;
-  font-size: 11px;
+  font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
-  border-radius: 0 !important;
+  border-radius: 4px;
 }
 .bg-primary input[type="submit"],
 .bg-primary button[type="submit"] {
@@ -2144,7 +2144,7 @@ button[type="submit"] .form-loading {
   background: #e4e4e4;
 }
 .accordion-1 .title span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2191,7 +2191,7 @@ button[type="submit"] .form-loading {
 }
 .accordion-2 .title:before {
   content: "\e622";
-  font-family: 'themify';
+  font-family: "微软雅黑",'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2259,7 +2259,7 @@ button[type="submit"] .form-loading {
   background: #eee;
 }
 .button-tabs .tab-title span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2347,7 +2347,7 @@ button[type="submit"] .form-loading {
   position: relative;
 }
 .text-tabs .tab-title span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2426,7 +2426,7 @@ button[type="submit"] .form-loading {
   margin-bottom: 16px;
 }
 .icon-tabs .tab-title span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2475,7 +2475,7 @@ button[type="submit"] .form-loading {
   border-radius: 0;
 }
 .progress-1 .progress-bar span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2491,7 +2491,7 @@ button[type="submit"] .form-loading {
   margin-bottom: 8px;
 }
 .progress-2 span {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2533,7 +2533,7 @@ button[type="submit"] .form-loading {
 }
 .breadcrumb-2 li a,
 .breadcrumb-2 li {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2582,7 +2582,7 @@ button[type="submit"] .form-loading {
   margin: 0;
 }
 .pagination li {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .pagination li a {
   width: 32px;
@@ -2781,7 +2781,7 @@ button[type="submit"] .form-loading {
   padding: 48px 32px;
 }
 .pricing-table .price {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 80px;
   line-height: 80px;
   font-weight: 300;
@@ -2898,7 +2898,7 @@ button[type="submit"] .form-loading {
 }
 .link-list a:after {
   content: "\e628";
-  font-family: 'themify';
+  font-family:"微软雅黑", 'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -2914,7 +2914,7 @@ button[type="submit"] .form-loading {
   margin-bottom: 0;
 }
 .widget .title {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
   line-height: 24px;
   font-weight: 400;
@@ -2989,7 +2989,7 @@ button[type="submit"] .form-loading {
   margin-right: 8px;
   color: #292929;
   content: "\e74b";
-  font-family: 'themify';
+  font-family: "微软雅黑",'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -3281,7 +3281,7 @@ img {
 .flex-direction-nav a.flex-next:before,
 .flex-direction-nav a.flex-prev:before {
   content: "\e649";
-  font-family: 'themify';
+  font-family: "微软雅黑",'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -3534,7 +3534,7 @@ img {
 .lb-nav a.lb-next:before,
 .lb-nav a.lb-prev:before {
   content: "\e646";
-  font-family: 'themify';
+  font-family: "微软雅黑",'themify';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -4505,7 +4505,7 @@ video {
   float: left;
   margin-right: 32px;
   cursor: pointer;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   border: 2px solid #019199;
   padding: 0 26px;
   height: 40px;
@@ -4655,7 +4655,7 @@ video {
 .countdown {
   font-size: 80px;
   line-height: 88px;
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微软雅黑", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 56px;
   line-height: 64px;
   font-weight: 100;
@@ -4732,7 +4732,7 @@ video {
   }
 }
 .tweets-slider.large p {
-  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑","Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
   line-height: 32px;
 }

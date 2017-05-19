@@ -24,7 +24,7 @@ else {
         	<div class="panel panel-primary title" id="title">
         		<div class="panel-heading">
         			<?= $xx ?>
-            		<span class="glyphicon glyphicon-hand-down"></span>
+                    <span class="glyphicon glyphicon-hand-down" aria-hidden="true"></span>
         		</div>
 				  <ul class="panel-body list-group">
 					  <li class="list-group-item">
